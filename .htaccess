@@ -5,5 +5,9 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-l
 
 RewriteRule ^errors.html$ index.php?url=errors [QSA,L]
+RewriteRule ^contact.html$ index.php?url=contact [QSA,L]
+
+RewriteRule blogs.html$ index.php?url=blog [QSA,L]
+RewriteRule ^(.*)-blogs-(.*).html$ index.php?url=blog/detail&id=$2 [QSA,L]
 
 php_value display_errors on
