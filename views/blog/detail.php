@@ -1,3 +1,6 @@
+<?php
+$item = $this->json;
+?>
         <section class="breadcrumbs-custom">
             <div class="parallax-container" data-parallax-img="<?php echo URL.'/styles/' ?>images/bg-blog.jpg">
                 <div class="breadcrumbs-custom-body parallax-content context-dark">
@@ -17,46 +20,36 @@
                                 <div class="col-12">
                                     <article class="post post-modern-1 box-xxl">
                                         <div class="post-modern-panel">
-                                            <div><a class="post-modern-tag" href="#">Organic food</a></div>
-                                            <div><time class="post-modern-time" datetime="2022-09-08">August 9, 2022</time></div>
-                                        </div>
-                                        <h3 class="post-modern-title">How Can Salmon be Raised Organically in Fish Farms?</h3>
-                                        <div class="post-modern-figure">
-                                            <img src="<?php echo URL.'/styles/' ?>images/post-7-800x394.jpg" alt="" width="800" height="394" />
-                                        </div>
-                                        <p class="post-modern-text">Lorem ipsum dolor sit amet, consetetur sadipscing
-                                            elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                                            aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                                            dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-                                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</p>
-                                        <p class="post-modern-text">At vero eos et accusam et justo duo dolores et ea
-                                            rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-                                            dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                                            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                                            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-                                            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-                                            amet. Stet clita kasd gubergren, no sea takimata sanctus est</p>
-                                    </article>
-                                    <!-- Quote Classic-->
-                                    <article class="quote-classic quote-classic-2">
-                                        <div class="quote-classic-text">
-                                            <div class="q">
-                                                There are a few ways to raise an organic salmon at a fish
-                                                farm and they proved to be successful.
+                                            <div>
+                                                <a class="post-modern-tag" href="#">
+                                                    <?php echo $item[0]['category'] ?>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <time class="post-modern-time" datetime="<?php echo date("Y-m-d", strtotime($item[0]['create_at'])) ?>">
+                                                    <?php echo date("F d, Y", strtotime($item[0]['create_at'])) ?>
+                                                </time>
                                             </div>
                                         </div>
+                                        <h3 class="post-modern-title"><?php echo $item[0]['title'] ?></h3>
+                                        <?php
+                                        if($item[0]['display_img_detail']== 0){
+                                        ?>
+                                        <div class="post-modern-figure">
+                                            <img src="<?php echo URL_IMAGE.'/blogs/content/'.$item[0]['image'] ?>" alt="" width="800" height="394" />
+                                        </div>
+                                        <?php
+                                        }
+                                        ?>
+                                        <div><?php echo $item[0]['content'] ?></div>
                                     </article>
-                                    <p>Cum bulla messis, omnes mineralises gratia camerarius, emeritis apolloniateses.
-                                        Equiso de bi-color burgus, examinare lapsus! Accola gratis usus est. Speciess
-                                        sunt equisos de emeritis calceus. Vae. Vortexs mori in tubinga! Sunt quadraes
-                                        amor bi-color, fatalis medicinaes. Cum scutum resistere, omnes imberes locus</p>
                                     <div class="single-post-bottom-panel">
                                         <div class="group-sm group-justify">
                                             <div>
                                                 <div class="group-sm group-tags">
-                                                    <a class="link-tag" href="#">Fruits</a>
-                                                    <a class="link-tag" href="#">Vegetables</a>
-                                                    <a class="link-tag" href="#">Drinks</a>
+                                                    <a class="link-tag" href="#">svkherbl</a>
+                                                    <a class="link-tag" href="#">lanui.vn</a>
+                                                    <a class="link-tag" href="#">naturem.us</a>
                                                 </div>
                                             </div>
                                             <div>
@@ -76,7 +69,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <h6 class="single-post-title">Related Posts</h6>
+                                    <h6 class="single-post-title">Bài viết liên quan</h6>
                                     <div class="row row-30">
                                         <div class="col-sm-6">
                                             <!-- Post Classic-->
@@ -123,17 +116,8 @@
                     </div>
                     <div class="col-lg-4 col-xl-3">
                         <div class="aside row row-30 row-md-50 justify-content-md-between">
-                            <div class="aside-item col-sm-6 col-md-5 col-lg-12">
-                                <h6 class="aside-title">Categories</h6>
-                                <ul class="list-categories">
-                                    <li><a href="#">News</a><span class="list-categories-number">(18)</span></li>
-                                    <li><a href="#">Organic Food</a><span class="list-categories-number">(9)</span></li>
-                                    <li><a href="#">Health</a><span class="list-categories-number">(5)</span></li>
-                                    <li><a href="#">Smoothies</a><span class="list-categories-number">(8)</span></li>
-                                </ul>
-                            </div>
                             <div class="aside-item col-sm-6 col-lg-12">
-                                <h6 class="aside-title">Latest Posts</h6>
+                                <h6 class="aside-title">Bài viết mới</h6>
                                 <div class="row row-20 row-lg-30 gutters-10">
                                     <?php
                                     for($i=  1; $i <= 4; $i++){
@@ -173,15 +157,6 @@
                                     <a class="link-tag" href="#">Food</a>
                                     <a class="link-tag" href="#">Smoothies</a>
                                 </div>
-                            </div>
-                            <div class="aside-item col-sm-6 col-lg-12">
-                                <h6 class="aside-title">Archives</h6>
-                                <ul class="list-marked list-archives d-inline-block d-md-block">
-                                    <li><a href="#">March 2022</a></li>
-                                    <li><a href="#">February 2022</a></li>
-                                    <li><a href="#">January 2022</a></li>
-                                    <li><a href="#">December 2022</a></li>
-                                </ul>
                             </div>
                         </div>
                     </div>

@@ -4,7 +4,7 @@
                 <div class="container">
                     <div class="row row-40 row-md-50 justify-content-xl-between">
                         <div class="col-sm-6 col-lg-4 wow fadeInRight">
-                            <h5 class="footer-corporate-title">Visit our farm</h5>
+                            <h5 class="footer-corporate-title">Thông tin liên hệ</h5>
                             <div class="footer-corporate-decor"></div>
                             <ul class="footer-corporate-info">
                                 <li>
@@ -14,9 +14,8 @@
                                         </div>
                                         <div class="unit-body">
                                             <a href="#">
-                                                523 Sylvan Ave, 5th Floor<br />
-                                                Mountain View,
-                                                CA 94041 USA
+                                                1D/16 Bình Giã, Phường 13<br />
+                                                Quận Tân Bình, Thành phố Hồ Chí Minh
                                             </a>
                                         </div>
                                     </div>
@@ -24,12 +23,24 @@
                                 <li>
                                     <div class="unit flex-column flex-sm-row align-items-center">
                                         <div class="unit-left">
-                                            <span class="icon mdi mdi-clock"></span>
+                                            <span class="icon mdi mdi-phone"></span>
                                         </div>
                                         <div class="unit-body">
                                             <ul class="list-schedule">
-                                                <li><span>Weekdays:</span><span>08:00am - 08:00pm</span></li>
-                                                <li><span>Weekends:</span><span>10:00am - 06:00pm</span></li>
+                                                <li><span>Telephone:</span><span>+84 (28) 730 222 66</span></li>
+                                                <li><span>Hotline:</span><span>+84 (09) 154 6060</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="unit flex-column flex-sm-row align-items-center">
+                                        <div class="unit-left">
+                                            <span class="icon mdi mdi-email-outline"></span>
+                                        </div>
+                                        <div class="unit-body">
+                                            <ul class="list-schedule">
+                                                <li><span>Email:</span><span>svkherbal@gmail.com</span></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -40,27 +51,29 @@
                             <h5 class="footer-corporate-title">Quick links</h5>
                             <div class="footer-corporate-decor"></div>
                             <ul class="footer-corporate-list d-sm-inline-block d-md-block">
-                                <li><a href="about-us.html">History</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="our-team.html">Farmers</a></li>
-                                <li><a href="#">Events</a></li>
-                                <li><a href="grid-blog.html">Blog</a></li>
-                                <li><a href="#">Organic Fruits</a></li>
-                                <li><a href="#">Our Smoothies</a></li>
-                                <li><a href="#">Fruit Boxes</a></li>
-                                <li><a href="#">Yoghurts</a></li>
+                                <?php
+                                $json_menu_bottom = $this->_Data->get_menu_bottom();
+                                foreach($json_menu_bottom as $row_bottom){
+                                    $link_bottom = $this->_Convert->return_link_menu($row_bottom['id'], $row_bottom['title'], $row_bottom['type_menu'], $row_bottom['link']);
+                                    echo '
+                                    <li>
+                                        <a href="'.$link_bottom.'">'.$row_bottom['title'].'</a>
+                                    </li>
+                                    ';
+                                }
+                                ?>
                             </ul>
                         </div>
                         <div class="col-lg-4 wow fadeInRight" data-wow-delay=".2s">
-                            <h5 class="footer-corporate-title">Get in touch</h5>
+                            <h5 class="footer-corporate-title">Liên hệ với chúng tôi</h5>
                             <div class="footer-corporate-decor"></div>
                             <p class="footer-corporate-text">
-                                We are always ready to answer any questions you may have or
-                                help you select organic fruits.
+                                Chúng tôi luôn sẵn sàng giải đáp mọi thắc mắc của bạn hoặc giúp bạn lựa chọn
+                                những sản phẩm phù hợp với bạn có xuất sứ 100% từ thiên nhiên.
                             </p>
                             <div class="group-sm group-middle">
-                                <a class="button button-shadow-2 button-gray-14 button-zakaria" href="grid-shop.html">Shop now</a>
-                                <a class="button button-shadow-2 button-primary-2 button-zakaria" href="contact-us.html">Contact us</a>
+                                <a class="button button-shadow-2 button-gray-14 button-zakaria" href="https://lanui.vn" target="_blank">Sản phẩm</a>
+                                <a class="button button-shadow-2 button-primary-2 button-zakaria" href="<?php echo URL.'/contact.html' ?>">Liên hệ</a>
                             </div>
                         </div>
                     </div>
@@ -89,7 +102,7 @@
                             <p class="rights">
                                 <span>&copy;&nbsp; </span>
                                 <span class="copyright-year"></span>
-                                <span>&nbsp;</span><span>Orange</span>
+                                <span>&nbsp;</span><span>Svkherbal</span>
                                 <span>.&nbsp; All rights reserved.</span>
                             </p>
                         </div>

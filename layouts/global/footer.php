@@ -6,8 +6,7 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3 wow fadeInRight">
                             <div class="footer-classic-brand">
                                 <a class="brand" href="../">
-                                    <img class="brand-logo-dark" src="<?php echo URL.'/styles/' ?>images/logo-default-280x92.png" alt="" width="140" height="46" />
-                                    <img class="brand-logo-light" src="<?php echo URL.'/styles/' ?>images/logo-inverse-280x92.png" alt="" width="140"height="46" />
+                                    <img class="brand-logo-dark" src="<?php echo URL.'/styles/' ?>images/Logo.png" alt="" width="140" height="46" />
                                 </a>
                             </div>
                             <ul class="list-schedule">
@@ -16,7 +15,7 @@
                             </ul>
                             <div class="footer-classic-social">
                                 <div class="group-lg group-middle">
-                                    <p>Get Social</p>
+                                    <p>Tìm chúng tôi</p>
                                     <div>
                                         <ul class="list-inline list-social list-inline-sm">
                                             <li><a class="icon mdi mdi-facebook" href="#"></a></li>
@@ -29,7 +28,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4 col-xl-3 wow fadeInRight" data-wow-delay=".1s">
-                            <h4 class="footer-classic-title">Contacts</h4>
+                            <h4 class="footer-classic-title">Liên hệ</h4>
                             <ul class="contacts-creative">
                                 <li>
                                     <div class="unit unit-spacing-sm flex-column flex-md-row">
@@ -37,28 +36,29 @@
                                             <span class="icon mdi mdi-map-marker"></span>
                                         </div>
                                         <div class="unit-body">
-                                            <a href="#">523 Sylvan Ave, 5th Floor<br />Mountain View, CA 94041 USA</a>
+                                            <a href="#">1D/16 Bình Giã, Phường 13<br />Quận Tân Bình, Tp.Hồ Chí Minh</a>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="unit unit-spacing-sm flex-column flex-md-row">
                                         <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
-                                        <div class="unit-body"><a href="tel:#">+1 (844) 123 456 78</a></div>
+                                        <div class="unit-body"><a href="tel:#">+84 (28) 730 222 66</a></div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="unit unit-spacing-sm flex-column flex-md-row">
                                         <div class="unit-left"><span class="icon mdi mdi-email-outline"></span></div>
-                                        <div class="unit-body"><a href="mailto:#">info@demolink.org</a></div>
+                                        <div class="unit-body"><a href="mailto:#">svkherbal@gmail.com</a></div>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                         <div class="col-lg-4 wow fadeInRight" data-wow-delay=".2s">
-                            <h4 class="footer-classic-title">Newsletter</h4>
-                            <p>Subscribe to our newsletter to receive weekly news, updates, special offers, and
-                                exclusive discounts.</p>
+                            <h4 class="footer-classic-title">Đăng ký bản tin</h4>
+                            <p>
+                                Đăng ký nhận bản tin của chúng tôi để nhận tin tức hàng tuần, cập nhật, ưu đãi đặc biệt
+                            </p>
                             <!-- RD Mailform-->
                             <form class="rd-form rd-mailform rd-form-inline rd-form-inline-2"
                                 data-form-output="form-output-global" data-form-type="subscribe" method="post"
@@ -81,15 +81,22 @@
                 <div class="container">
                     <div class="row row-10 align-items-center justify-content-sm-between">
                         <div class="col-md-auto">
-                            <p class="rights"><span>&copy;&nbsp;</span><span
-                                    class="copyright-year"></span><span>&nbsp;</span><span>Farm</span><span>.&nbsp; All
-                                    rights reserved.</span></p>
+                            <p class="rights">
+                                <span>&copy;&nbsp;</span>
+                                <span class="copyright-year"></span>
+                                <span>&nbsp;</span>
+                                <span>Svkherbal</span>
+                                <span>.&nbsp; Allrights reserved.</span>
+                            </p>
                         </div>
-                        <div class="col-md-auto order-md-1"><a href="terms-of-use.html">Privacy Policy</a></div>
+                        <div class="col-md-auto order-md-1">
+                            <a href="terms-of-use.html">Privacy Policy</a>
+                        </div>
                         <div class="col-md-auto">
-                            <div class="group-sm group-middle"><img src="<?php echo URL.'/styles/' ?>images/payment-1-45x15.png" alt="" width="45"
-                                    height="15" /><img src="<?php echo URL.'/styles/' ?>images/payment-2-46x28.png" alt="" width="46"
-                                    height="28" /><img src="<?php echo URL.'/styles/' ?>images/payment-3-62x17.png" alt="" width="62" height="17" />
+                            <div class="group-sm group-middle">
+                                <img src="<?php echo URL.'/styles/' ?>images/payment-1-45x15.png" alt="" width="45" height="15" />
+                                <img src="<?php echo URL.'/styles/' ?>images/payment-2-46x28.png" alt="" width="46" height="28" />
+                                <img src="<?php echo URL.'/styles/' ?>images/payment-3-62x17.png" alt="" width="62" height="17" />
                             </div>
                         </div>
                     </div>

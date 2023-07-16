@@ -77,38 +77,28 @@ class Convert{
         $class = ( $currentpage == 1 ) ? "active" : "";
 
         if ( $start > 1 ) {
-            $html .= '<li><a href="?page=1">1</a></li>';
-            $html .= '<li>';
-            $html .= '<a>...</a></li>';
+            $html .= '<li class="page-item"><a class="page-link" href="?page=1">1</a></li>';
+            $html .= '<li class="page-item"><a class="page-link">...</a></li>';
         }
         for ( $i = $start ; $i <= $end; $i++ ) {
-            $class = ( $currentpage == $i ) ? "active" : "";
-            $html .= '<li>';
-            $html .= '<a class="'.$class.'" href="?page='.$i.'">' . $i . '</a>';
-            $html .= '</li>';
+            //$class = ( $currentpage == $i ) ? "active" : "";
+            if($currentpage == $i){
+                $html .= '<li class="page-item active">';
+                $html .= '<span class="page-link">' . $i . '</span>';
+                $html .= '</li>';
+            }else{
+                $html .= '<li class="page-item">';
+                $html .= '<a class="page-link" href="?page='.$i.'">' . $i . '</a>';
+                $html .= '</li>';
+            }
         }
         if ( $end < $last ) {
-            $html .= '<li';
-            $html .= '<a >...</a></li>';
-            $html .= '<li>';
-            $html .= '<a href="?page='.$last.'">' . $last . '</a>';
+            $html .= '<li class="page-item"><a class="page-link">...</a></li>';
+            $html .= '<li class="page-item">';
+            $html .= '<a class="page-link" href="?page='.$last.'">' . $last . '</a>';
             $html .= '</li>';
         }
         return $html;
-    }
-
-    function emailValid($string){ 
-        if (preg_match ("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+\.[A-Za-z]{2,6}$/", $string)){
-            return true; 
-        }else{
-            return false;
-        }
-    } 
-
-    function return_fullname_sort($txt){
-        $data = trim($txt); $data = explode(" ", $data);
-        $fullname = array_slice($data, -2,  2, true);
-        return implode(" ",  $fullname);
     }
 
     /**
@@ -131,14 +121,10 @@ class Convert{
      */
     function return_link_menu($id, $title, $type_menu, $link){
         if($type_menu == 1){// mot bai viet
-            $str_link = URL.'/'.$this->vn2latin($title, true).'-blogs-'.base64_encode($link).'.html';
+            $str_link = URL.'/'.$this->vn2latin($title, true).'-post-'.base64_encode($link).'.html';
         }elseif($type_menu == 2){ // danh sach bai viet
-            $str_link = URL.'/blogs.html';
-        }elseif($type_menu == 3){ //  mot san pham
-            $str_link = URL.'/'.$this->vn2latin($title, true).'-product-'.base64_encode($link).'.html';
-        }elseif($type_menu == 4){ // danh sach san pham
-            $str_link = URL.'/'.$this->vn2latin($title, true).'-menu-'.base64_encode($id).'.html';
-        }elseif($type_menu == 5){ // lien he
+            $str_link = URL.'/'.$this->vn2latin($title, true).'-blogs-'.base64_encode($id).'.html';
+        }elseif($type_menu == 3){ // lien he
             $str_link = URL.'/contact.html';
         }else{
             $str_link = $link;
@@ -149,56 +135,24 @@ class Convert{
     /**
      * Resize and crop image
      */
-    function convert_img($folder, $fileimage, $w, $h, $type){
+    function convert_img($folder, $fileimage, $w, $h){
         $dir = DIR_IMAGE.'/'.$folder;
         if(!file_exists($dir.'/'.$w.'x'.$h)){
             mkdir($dir.'/'.$w.'x'.$h, 0777, true);
         }
-        if($type == 1){
-            $array_img = explode("_", $fileimage);
-            if(!file_exists($dir.'/'.$w.'x'.$h.'/'.$array_img[0].'.jpg')){
-                $magicianObj = new imageLib($dir.'/'.$fileimage);
-                $ext = pathinfo($fileimage, PATHINFO_EXTENSION);
-                if($ext == 'png'){
-                    $magicianObj -> setTransparency(false);
-                    $magicianObj -> setFillColor('#ffffff');
-                }
-                $magicianObj->resizeImage($w, $h, 'crop');
-                $magicianObj->saveImage($dir.'/'.$w.'x'.$h.'/'.$array_img[0].'.jpg', 100);
-                $filename = $array_img[0].'.jpg';
-            }else{
-                $filename = $array_img[0].'.jpg';
+        $array_img = explode("_", $fileimage);
+        if(!file_exists($dir.'/'.$w.'x'.$h.'/'.$array_img[0].'.jpg')){
+            $magicianObj = new imageLib($dir.'/'.$fileimage);
+            $ext = pathinfo($fileimage, PATHINFO_EXTENSION);
+            if($ext == 'png'){
+                $magicianObj -> setTransparency(false);
+                $magicianObj -> setFillColor('#ffffff');
             }
-        }elseif($type == 2){
-            $array_img = explode("_", $fileimage);
-            if(!file_exists($dir.'/'.$w.'x'.$h.'/'.$array_img[0].'_'.end($array_img).'.jpg')){
-                $magicianObj = new imageLib($dir.'/'.$fileimage);
-                $ext = pathinfo($fileimage, PATHINFO_EXTENSION);
-                if($ext == 'png'){
-                    $magicianObj -> setTransparency(false);
-                    $magicianObj -> setFillColor('#ffffff');
-                }
-                $magicianObj->resizeImage($w, $h, 'crop');
-                $magicianObj->saveImage($dir.'/'.$w.'x'.$h.'/'.$array_img[0].'_'.end($array_img).'.jpg', 100);
-                $filename = $array_img[0].'_'.end($array_img).'.jpg';
-            }else{
-                $filename = $array_img[0].'_'.end($array_img).'.jpg';
-            }
+            $magicianObj->resizeImage($w, $h, 'crop');
+            $magicianObj->saveImage($dir.'/'.$w.'x'.$h.'/'.$array_img[0].'.jpg', 100);
+            $filename = $array_img[0].'.jpg';
         }else{
-            $array_img = explode(".", $fileimage);
-            if(!file_exists($dir.'/'.$w.'x'.$h.'/'.$array_img[0].'.jpg')){
-                $magicianObj = new imageLib($dir.'/'.$fileimage);
-                $ext = pathinfo($fileimage, PATHINFO_EXTENSION);
-                if($ext == 'png'){
-                    $magicianObj -> setTransparency(false);
-                    $magicianObj -> setFillColor('#ffffff');
-                }
-                $magicianObj->resizeImage($w, $h, 'crop');
-                $magicianObj->saveImage($dir.'/'.$w.'x'.$h.'/'.$array_img[0].'.jpg', 100);
-                $filename = $array_img[0].'.jpg';
-            }else{
-                $filename = $array_img[0].'.jpg';
-            }
+            $filename = $array_img[0].'.jpg';
         }
         return $filename;
     }
