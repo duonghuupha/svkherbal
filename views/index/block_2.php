@@ -17,10 +17,8 @@
                 </div>
                 <div class="unit-body">
                     <div class="product-dawn-title">
-                        <div class="heading-3 product-dawn-title-big">Order</div>
-                        <div class="heading-5 product-dawn-title-small">Our fruit box</div>
+                        <div class="heading-5 product-dawn-title-small">Tầm nhìn & Sứ mệnh</div>
                     </div>
-                    <div class="product-dawn-price">From $89.00</div>
                     <div class="button button-sm button-icon-3 product-dawn-button">
                         <span  class="mdi mdi-arrow-right"></span>
                     </div>
@@ -37,10 +35,8 @@
                 </div>
                 <div class="unit-body">
                     <div class="product-dawn-title">
-                        <div class="heading-3 product-dawn-title-big">Fresh</div>
-                        <div class="heading-5 product-dawn-title-small">Smoothies</div>
+                        <div class="heading-5 product-dawn-title-small">Chiến lược</div>
                     </div>
-                    <div class="product-dawn-price">From $12.00</div>
                     <div class="button button-sm button-icon-3 product-dawn-button">
                         <span class="mdi mdi-arrow-right"></span>
                     </div>
@@ -57,10 +53,8 @@
                 </div>
                 <div class="unit-body">
                     <div class="product-dawn-title">
-                        <div class="heading-3 product-dawn-title-big">New</div>
-                        <div class="heading-5 product-dawn-title-small">Summer offers</div>
+                        <div class="heading-5 product-dawn-title-small">Giá trị cốt lõi</div>
                     </div>
-                    <div class="product-dawn-price">From $21.00</div>
                     <div class="button button-sm button-icon-3 product-dawn-button">
                         <span class="mdi mdi-arrow-right"></span>
                     </div>

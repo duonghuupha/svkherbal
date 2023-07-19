@@ -1,7 +1,7 @@
 <!-- Our blog-->
 <section class="section section-xxl bg-default">
     <div class="container">
-        <h2 class="title-style-3 wow fadeScale">Our blog</h2>
+        <h2 class="title-style-3 wow fadeScale">Tin tức</h2>
         <div class="row row-lg row-30">
             <div class="col-sm-6 wow fadeInLeft">
                 <!-- Post Creative-->

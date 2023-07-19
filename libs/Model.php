@@ -71,6 +71,17 @@ class Model {
         return $query->fetchAll();
     }
 /////////////////////////////////////end cac ham khac ///////////////////////////////////////////////////////////////////////
+
+/*********************************Cac ham su dung trang index************************************* */
+    function get_all_block(){
+        $query = $this->db->query("SELECT * FROM tbl_block WHERE status = 1 ORDER BY order_block ASC");
+        return $query->fetchAll();
+    }
+
+    function get_block_1(){
+        $query = $this->db->query("SELECT * FROM tbl_block_1 WHERE status = 1");
+        return $query->fetchAll();
+    }
 }
 
 ?>

@@ -48,7 +48,7 @@
                             </ul>
                         </div>
                         <div class="col-sm-6 col-lg-4 wow fadeInRight" data-wow-delay=".1s">
-                            <h5 class="footer-corporate-title">Quick links</h5>
+                            <h5 class="footer-corporate-title">Truy cập nhanh</h5>
                             <div class="footer-corporate-decor"></div>
                             <ul class="footer-corporate-list d-sm-inline-block d-md-block">
                                 <?php
