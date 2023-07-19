@@ -82,6 +82,27 @@ class Model {
         $query = $this->db->query("SELECT * FROM tbl_block_1 WHERE status = 1");
         return $query->fetchAll();
     }
+
+    function get_block_2(){
+        $query = $this->db->query("SELECT * FROM  tbl_block_2 WHERE status = 1");
+        return $query->fetchAll();
+    }
+
+    function get_block_4(){
+        $query = $this->db->query("SELECT * FROM tbl_block_4 WHERE id = 1");
+        return $query->fetchAll();
+    }
+
+    function get_data_block_4($id){
+        $query = $this->db->query("SELECT id, title, image FROM tbl_content WHERE cate_id = $id
+                                    AND status = 1 ORDER BY RAND() LIMIT 0, 6");
+        return $query->fetchAll();
+    }
+
+    function get_block_6(){
+        $query = $this->db->query("SELECT * FROM tbl_block_6 WHERE status = 1");
+        return $query->fetchAll();
+    }
 }
 
 ?>
