@@ -1,6 +1,6 @@
 <!-- Featured Events-->
 <section class="section section-xxl section-bottom-0 section-inset-5 bg-gray-100 text-sm-start bg-image"
-    style="background-image: url(<?php echo URL.'/styles/' ?>images/fruit-farm/bg-image-1.jpg);">
+    style="background-image: url(<?php echo URL.'/styles/' ?>images/fruit-farm/bg-image-2.png);">
     <div class="container">
         <div class="row justify-content-sm-end">
             <div class="col-sm-9 col-md-8 col-lg-7 col-xl-6">
@@ -18,8 +18,9 @@
                                         <h4 class="box-icon-kelly-title">
                                             <a href="#">Thảo dược tự nhiên</a>
                                         </h4>
-                                        <p class="box-icon-kelly-text">Our farming technologies are designed to
-                                            avoid any pesticides in the fruits we offer.</p>
+                                        <p class="box-icon-kelly-text">
+                                            Thảo dược tự nhiên đã trở thành một phần không thể thiếu trong tất cả các sản phẩm của SVK Herbal
+                                        </p>
                                     </div>
                                 </div>
                             </article>
@@ -31,8 +32,11 @@
                                         <h4 class="box-icon-kelly-title">
                                             <a href="#">Cân bằng cuộc sống</a>
                                         </h4>
-                                        <p class="box-icon-kelly-text">We deliver our products always fresh
-                                            &amp; organic so that you could enjoy your meal.</p>
+                                        <p class="box-icon-kelly-text">
+                                            Bí quyết nằm ở những thảo dược tự nhiên giúp bù đắp sự thiếu hụt các hoạt chất sinh học thiết yếu, 
+                                            cung cấp vitamin và các acid amin cần thiết giúp nâng cao năng lượng của tế bào, tăng sức 
+                                            đề kháng.
+                                        </p>
                                     </div>
                                 </div>
                             </article>
@@ -44,8 +48,11 @@
                                         <h4 class="box-icon-kelly-title">
                                             <a href="#">Đội ngũ chuyên gia</a>
                                         </h4>
-                                        <p class="box-icon-kelly-text">Our farm combines modern technologies,
-                                            innovations, and trusted farming traditions.</p>
+                                        <p class="box-icon-kelly-text">
+                                            Chúng tôi hợp tác với những y bác sỹ đầu ngành có nhiều năm kinh nghiệm để nghiên cứu cho ra những công 
+                                            thức tối ưu nhất. Bên cạnh đó, SVK herbal còn tiến hành nghiên cứu và kiểm nghiệm lâm sàng TPCN 
+                                            chứng minh mang lại hiệu quả cho người sử dụng.
+                                        </p>
                                     </div>
                                 </div>
                             </article>
