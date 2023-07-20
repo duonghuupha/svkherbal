@@ -10,7 +10,8 @@ $json = $this->_Data->get_data_block_9($item[0]['link']);
             $i = 0;
             foreach($json as $row){
                 $i++;
-                $class = ($i % 2 == 0) ? 'fadeInLeft' : 'fadeInRight';
+                $class = ($i % 2 == 0) ? 'fadeInLeft' : 'fadeInRight'; $width = '550'; $height = '247';
+                $img_src = $this->_Convert->convert_img('blogs/content/', $row['image'], $width, $height); 
             ?>
             <div class="col-sm-6 wow <?php echo $class ?>">
                 <!-- Post Creative-->
@@ -19,16 +20,16 @@ $json = $this->_Data->get_data_block_9($item[0]['link']);
                         <h4 class="post-lisa-title">
                             <a href="blog-post.html"
                             title="<?php echo $row['title'] ?>">
-                                <?php echo $this->_Convert->cut($row['title'], 40) ?>
+                                <?php echo $row['title'] ?>
                             </a>
                         </h4>
                         <div class="post-lisa-time">
-                            <time datetime="2022-08-09">August 9, 2022</time>
+                            <time datetime="<?php echo date("Y-m-d", strtotime($row['create_at'])) ?>"><?php echo date("F d, Y", strtotime($row['create_at'])) ?></time>
                         </div>
                     </div>
                     <a class="post-lisa-figure" href="blog-post.html">
-                        <img src="<?php echo URL.'/styles/' ?>images/fruit-farm/post-1-550x247.jpg" alt="" width="550"
-                            height="247" />
+                        <img src="<?php echo URL_IMAGE.'/blogs/content/'.$width.'x'.$height.'/'.$img_src ?>" 
+                            alt="<?php echo $row['title'] ?>" width="550" height="247" />
                     </a>
                 </article>
             </div>

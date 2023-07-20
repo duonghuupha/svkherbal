@@ -84,9 +84,12 @@
                     <div class="row row-10 row-sm-30 align-items-center justify-content-sm-between">
                         <div class="col-sm-auto col-lg-4 text-lg-start">
                             <div class="group-xs group-middle">
-                                <img src="<?php echo URL.'/styles/' ?>images/payment-1-45x15.png" alt="" width="45" height="15" />
-                                <img src="<?php echo URL.'/styles/' ?>images/payment-2-46x28.png" alt="" width="46" height="28" />
-                                <img src="<?php echo URL.'/styles/' ?>images/payment-3-62x17.png" alt=""  width="62" height="17" />
+                                <a href="">
+                                    <img src="<?php echo URL.'/styles/' ?>images/vietnam.png" alt="" width="45" height="45" />
+                                </a>
+                                <a href="">
+                                    <img src="<?php echo URL.'/styles/' ?>images/usa.png" alt="" width="45" height="45" />
+                                </a>
                             </div>
                         </div>
                         <div class="col-sm-auto col-lg-4">

@@ -94,9 +94,12 @@
                         </div>
                         <div class="col-md-auto">
                             <div class="group-sm group-middle">
-                                <img src="<?php echo URL.'/styles/' ?>images/payment-1-45x15.png" alt="" width="45" height="15" />
-                                <img src="<?php echo URL.'/styles/' ?>images/payment-2-46x28.png" alt="" width="46" height="28" />
-                                <img src="<?php echo URL.'/styles/' ?>images/payment-3-62x17.png" alt="" width="62" height="17" />
+                                <a href="">
+                                    <img src="<?php echo URL.'/styles/' ?>images/vietnam.png" alt="" width="45" height="45" />
+                                </a>
+                                <a href="">
+                                    <img src="<?php echo URL.'/styles/' ?>images/usa.png" alt="" width="45" height="45" />
+                                </a>
                             </div>
                         </div>
                     </div>

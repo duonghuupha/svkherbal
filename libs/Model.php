@@ -115,6 +115,12 @@ class Model {
                                     ORDER BY RAND() LIMIT 0, 2");
         return $query->fetchAll();
     }
+
+    function get_block_10(){
+        $query = $this->db->query("SELECT id, title, image, link FROM tbl_block_10 WHERE status = 1
+                                ORDER BY id DESC");
+        return $query->fetchAll();
+    }
 }
 
 ?>
