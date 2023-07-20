@@ -103,6 +103,18 @@ class Model {
         $query = $this->db->query("SELECT * FROM tbl_block_6 WHERE status = 1");
         return $query->fetchAll();
     }
+
+    function get_block_9(){
+        $query = $this->db->query("SELECT * FROM tbl_block_9 WHERE id = 1");
+        return $query->fetchAll();
+    }
+
+    function get_data_block_9($array){
+        $query = $this->db->query("SELECT id, title, image, create_at FROM tbl_content
+                                    WHERE FIND_IN_SET(cate_id, '$array') AND status = 1
+                                    ORDER BY RAND() LIMIT 0, 2");
+        return $query->fetchAll();
+    }
 }
 
 ?>
