@@ -84,10 +84,10 @@
                     <div class="row row-10 row-sm-30 align-items-center justify-content-sm-between">
                         <div class="col-sm-auto col-lg-4 text-lg-start">
                             <div class="group-xs group-middle">
-                                <a href="">
+                                <a href="<?php echo URL.'/change-lang-'.base64_encode('vi').'.html' ?>">
                                     <img src="<?php echo URL.'/styles/' ?>images/vietnam.png" alt="" width="45" height="45" />
                                 </a>
-                                <a href="">
+                                <a href="<?php echo URL.'/change-lang-'.base64_encode('en').'.html' ?>">
                                     <img src="<?php echo URL.'/styles/' ?>images/usa.png" alt="" width="45" height="45" />
                                 </a>
                             </div>

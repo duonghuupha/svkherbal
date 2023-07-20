@@ -94,10 +94,10 @@
                         </div>
                         <div class="col-md-auto">
                             <div class="group-sm group-middle">
-                                <a href="">
+                                <a href="<?php echo URL.'/change-lang-'.base64_encode('vi').'.html' ?>">
                                     <img src="<?php echo URL.'/styles/' ?>images/vietnam.png" alt="" width="45" height="45" />
                                 </a>
-                                <a href="">
+                                <a href="<?php echo URL.'/change-lang-'.base64_encode('en').'.html' ?>">
                                     <img src="<?php echo URL.'/styles/' ?>images/usa.png" alt="" width="45" height="45" />
                                 </a>
                             </div>
