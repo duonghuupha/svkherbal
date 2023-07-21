@@ -10,17 +10,19 @@
                                 </a>
                             </div>
                             <ul class="list-schedule">
-                                <li><span>Weekdays:</span><span>08:00am - 08:00pm</span></li>
-                                <li><span>Weekends:</span><span>10:00am - 06:00pm</span></li>
+                                <li>
+                                    <span>Thời gian làm việc:</span>
+                                    <span><?php echo $item[0]['time_work'] ?></span>
+                                </li>
                             </ul>
                             <div class="footer-classic-social">
                                 <div class="group-lg group-middle">
                                     <p>Tìm chúng tôi</p>
                                     <div>
                                         <ul class="list-inline list-social list-inline-sm">
-                                            <li><a class="icon mdi mdi-facebook" href="#"></a></li>
-                                            <li><a class="icon mdi mdi-twitter" href="#"></a></li>
-                                            <li><a class="icon mdi mdi-instagram" href="#"></a></li>
+                                            <li><a class="icon mdi mdi-facebook" href="<?php echo $item[0]['facebook'] ?>"></a></li>
+                                            <li><a class="icon mdi mdi-twitter" href="<?php echo $item[0]['twiter'] ?>"></a></li>
+                                            <li><a class="icon mdi mdi-instagram" href="<?php echo $item[0]['instagram'] ?>"></a></li>
                                             <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
                                         </ul>
                                     </div>
@@ -36,20 +38,24 @@
                                             <span class="icon mdi mdi-map-marker"></span>
                                         </div>
                                         <div class="unit-body">
-                                            <a href="#">1D/16 Bình Giã, Phường 13<br />Quận Tân Bình, Tp.Hồ Chí Minh</a>
+                                            <a href="#">
+                                            <?php echo $item[0]['address'] ?>
+                                            <br />
+                                            <?php echo $item[0]['district'] ?>, <?php echo $item[0]['city'] ?>
+                                        </a>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="unit unit-spacing-sm flex-column flex-md-row">
                                         <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
-                                        <div class="unit-body"><a href="tel:#">+84 (28) 730 222 66</a></div>
+                                        <div class="unit-body"><a href="tel:#"><?php echo $item[0]['phone'] ?></a></div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="unit unit-spacing-sm flex-column flex-md-row">
                                         <div class="unit-left"><span class="icon mdi mdi-email-outline"></span></div>
-                                        <div class="unit-body"><a href="mailto:#">svkherbal@gmail.com</a></div>
+                                        <div class="unit-body"><a href="mailto:#"><?php echo $item[0]['email'] ?></a></div>
                                     </div>
                                 </li>
                             </ul>

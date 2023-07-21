@@ -1,3 +1,6 @@
+<?php
+$item = $this->_Data->get_setting_global();
+?>
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
 
@@ -6,7 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="<?php echo URL.'/styles/' ?>images/about/logo.png" type="image/x-icon">
+    <link rel="icon" href="<?php echo URL_IMAGE.'/other/'.$item[0]['image_logo'] ?>" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,600,700%7CLato%7CKalam:300,400,700">
     <link rel="stylesheet" href="<?php echo URL.'/styles/' ?>css/bootstrap.css">
     <link rel="stylesheet" href="<?php echo URL.'/styles/' ?>css/fonts.css">
@@ -56,7 +59,7 @@
                                 <!-- RD Navbar Brand-->
                                 <div class="rd-navbar-brand">
                                     <a class="brand" href="<?php echo URL ?>">
-                                        <img class="brand-logo-dark" src="<?php echo URL.'/styles/' ?>images/Logo.png" alt="" width="140" height="46" />
+                                        <img class="brand-logo-dark" src="<?php echo URL_IMAGE.'/other/'.$item[0]['image_logo'] ?>" alt="" width="140" height="46" />
                                     </a>
                                 </div>
                             </div>
@@ -147,22 +150,22 @@
                                             <ul class="contacts-modern">
                                                 <li>
                                                     <a href="#">
-                                                        1D/16 Bình Giã, Phường 13<br>
-                                                        Quận Tân Bình, Thành phố Hồ Chí Minh
+                                                        <?php echo $item[0]['address'] ?><br>
+                                                        <?php echo $item[0]['district'] ?>, <?php echo $item[0]['city'] ?>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="tel:#">+84 (28) 730 222 66</a><br/>
-                                                    <a href="tel:#">+84 (09) 154 6060</a><br/>
-                                                    <a href="mailto:svkherbal@gmail.com">svkherbal@gmail.com</a>
+                                                    <a href="tel:#"><?php echo $item[0]['phone'] ?></a><br/>
+                                                    <a href="tel:#"><?php echo $item[0]['hotline'] ?></a><br/>
+                                                    <a href="mailto:<?php echo $item[0]['email'] ?>"><?php echo $item[0]['email'] ?></a>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div>
                                             <ul class="list-inline list-social list-inline-xl">
-                                                <li><a class="icon mdi mdi-facebook" href="#"></a></li>
-                                                <li><a class="icon mdi mdi-twitter" href="#"></a></li>
-                                                <li><a class="icon mdi mdi-instagram" href="#"></a></li>
+                                                <li><a class="icon mdi mdi-facebook" href="<?php echo $item[0]['facebook'] ?>"></a></li>
+                                                <li><a class="icon mdi mdi-twitter" href="<?php echo $item[0]['twiter'] ?>"></a></li>
+                                                <li><a class="icon mdi mdi-instagram" href="<?php echo $item[0]['instagram'] ?>"></a></li>
                                                 <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
                                             </ul>
                                         </div>

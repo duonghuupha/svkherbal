@@ -1,3 +1,6 @@
+<?php
+$item = $this->_Data->get_setting_global();
+?>
         <!-- Page Footer-->
         <footer class="section footer-corporate footer-corporate-2 context-dark">
             <div class="footer-corporate-body section-lg">
@@ -14,8 +17,8 @@
                                         </div>
                                         <div class="unit-body">
                                             <a href="#">
-                                                1D/16 Bình Giã, Phường 13<br />
-                                                Quận Tân Bình, Thành phố Hồ Chí Minh
+                                                <?php echo $item[0]['address'] ?><br />
+                                                <?php echo $item[0]['district'] ?>, <?php echo $item[0]['city'] ?>
                                             </a>
                                         </div>
                                     </div>
@@ -27,8 +30,8 @@
                                         </div>
                                         <div class="unit-body">
                                             <ul class="list-schedule">
-                                                <li><span>Telephone:</span><span>+84 (28) 730 222 66</span></li>
-                                                <li><span>Hotline:</span><span>+84 (09) 154 6060</span></li>
+                                                <li><span>Điện thoại:</span><span><?php echo $item[0]['phone'] ?></span></li>
+                                                <li><span>Hotline:</span><span><?php echo $item[0]['hotline'] ?></span></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -40,7 +43,7 @@
                                         </div>
                                         <div class="unit-body">
                                             <ul class="list-schedule">
-                                                <li><span>Email:</span><span>svkherbal@gmail.com</span></li>
+                                                <li><span>Email:</span><span><?php echo $item[0]['email'] ?></span></li>
                                             </ul>
                                         </div>
                                     </div>
