@@ -84,7 +84,12 @@ class Model {
     }
 
     function get_block_2(){
-        $query = $this->db->query("SELECT * FROM  tbl_block_2 WHERE status = 1");
+        $query = $this->db->query("SELECT * FROM tbl_block_2 WHERE status = 1");
+        return $query->fetchAll();
+    }
+
+    function get_block_3(){
+        $query = $this->db->query("SELECT * FROM tbl_block_3 WHERE status = 1");
         return $query->fetchAll();
     }
 
