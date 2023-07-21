@@ -1,13 +1,13 @@
 <?php
-$json = $this->_Data->get_block_3();
+$json = $this->_Data->get_block_3(); $item = $this->_Data->get_block_3_global();
 ?>
 <section class="section section-xxl section-bottom-0 section-inset-5 bg-gray-100 text-sm-start bg-image"
-    style="background-image: url(<?php echo URL.'/styles/' ?>images/fruit-farm/bg-image-2.png);">
+    style="background-image: url(<?php echo URL_IMAGE.'/block/'.$item[0]['image'] ?>);">
     <div class="container">
         <div class="row justify-content-sm-end">
             <div class="col-sm-9 col-md-8 col-lg-7 col-xl-6">
                 <h3 class="title-style-3 wow fadeInRight">
-                    Nền tảng & khoa học
+                    <?php echo $item[0]['title'] ?>
                 </h3>
                 <div class="swiper-container swiper-slider swiper-slider-custom swiper-slider-7 swiper-scrollbar-1"
                     data-autoplay="5000" data-direction="vertical" data-margin="25" data-slides="auto"

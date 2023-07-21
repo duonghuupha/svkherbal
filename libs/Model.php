@@ -92,6 +92,11 @@ class Model {
         $query = $this->db->query("SELECT * FROM tbl_block_3 WHERE status = 1");
         return $query->fetchAll();
     }
+    
+    function get_block_3_global(){
+        $query = $this->db->query("SELECT * FROM  tbl_block_3_global WHERE id = 1");
+        return $query->fetchAll();
+    }
 
     function get_block_4(){
         $query = $this->db->query("SELECT * FROM tbl_block_4 WHERE id = 1");
@@ -106,6 +111,11 @@ class Model {
 
     function get_block_6(){
         $query = $this->db->query("SELECT * FROM tbl_block_6 WHERE status = 1");
+        return $query->fetchAll();
+    }
+
+    function get_block_6_global(){
+        $query = $this->db->query("SELECT * FROM  tbl_block_6_global WHERE id = 1");
         return $query->fetchAll();
     }
 

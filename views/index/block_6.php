@@ -1,9 +1,9 @@
 <?php
-$json = $this->_Data->get_block_6();
+$json = $this->_Data->get_block_6(); $item = $this->_Data->get_block_6_global();
 ?>
 <section class="section section-xxl bg-default">
     <div class="container">
-        <h2 class="title-style-3 wow fadeScale">Đội ngũ chuyên gia</h2>
+        <h2 class="title-style-3 wow fadeScale"><?php echo $item[0]['title'] ?></h2>
         <!-- Owl Carousel-->
         <div class="owl-carousel" data-items="1" data-sm-items="2" data-lg-items="2" data-margin="30" data-dots="true"
             data-mouse-drag="false">
