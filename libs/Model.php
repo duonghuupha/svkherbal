@@ -109,6 +109,11 @@ class Model {
         return $query->fetchAll();
     }
 
+    function get_block_5(){
+        $query = $this->db->query("SELECT * FROM  tbl_block_5 WHERE id = 1");
+        return $query->fetchAll();
+    }
+
     function get_block_6(){
         $query = $this->db->query("SELECT * FROM tbl_block_6 WHERE status = 1");
         return $query->fetchAll();

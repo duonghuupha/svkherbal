@@ -5,7 +5,7 @@ class Blog_Model extends Model{
     }
 
     function get_detail_blog($id){
-        $query = $this->db->query("SELECT id, code, title, description, content, image, create_at,
+        $query = $this->db->query("SELECT id, code, title, description, content, image, create_at, cate_id,
                                     (SELECT tbl_category.title FROM tbl_category WHERE tbl_category.id = cate_id)
                                     AS category, display_img_detail FROM tbl_content WHERE id = $id");
         return $query->fetchAll();
@@ -27,6 +27,13 @@ class Blog_Model extends Model{
         $result['total'] = $row[0]['Total'];
         $result['rows'] = $query->fetchAll();
         return $result;
+    }
+
+    function get_data_block_extra($id, $cate_id){
+        $query = $this->db->query("SELECT id, title, image, description, create_at, code FROM tbl_content
+                                    WHERE status = 1 AND cate_id = $cate_id AND id != $id ORDER BY RAND()
+                                    LIMIT 0, 2");
+        return $query->fetchAll();
     }
 }
 ?>

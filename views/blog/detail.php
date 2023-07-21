@@ -71,44 +71,35 @@ $item = $this->json;
                                 <div class="col-12">
                                     <h6 class="single-post-title"><?php echo $this->_Language->array_lang('title_extra') ?></h6>
                                     <div class="row row-30">
+                                        <?php
+                                        foreach($this->json_extra as $row){
+                                            $width = 370; $height = 239;
+                                            $img_src = $this->_Convert->convert_img('blogs/content/', $row['image'], $width, $height);
+                                        ?>
                                         <div class="col-sm-6">
-                                            <!-- Post Classic-->
                                             <article class="post post-classic box-md">
-                                                <a class="post-classic-figure" href="blog-post.html">
-                                                    <img src="<?php echo URL.'/styles/' ?>images/post-1-370x239.jpg" alt="" width="370" height="239" />
+                                                <a class="post-classic-figure" href="<?php echo URL.'/'.$this->_Convert->vn2latin($row['title'], true).'-post-'.base64_encode($row['id']).'.html' ?>">
+                                                    <img src="<?php echo URL_IMAGE.'/blogs/content/'.$width.'x'.$height.'/'.$img_src ?>" 
+                                                    alt="<?php echo $row['title'] ?>" width="370" height="239" />
                                                 </a>
                                                 <div class="post-classic-content">
                                                     <div class="post-classic-time">
-                                                        <time datetime="2022-09-08">August 9, 2022</time>
+                                                        <time datetime="<?php echo date("Y-m-d", strtotime($row['create_at'])) ?>">
+                                                            <?php echo date("F d, Y", strtotime($row['create_at'])) ?>
+                                                        </time>
                                                     </div>
                                                     <h5 class="post-classic-title">
-                                                        <a href="blog-post.html">Top 5 Easy and Cheap Organic Breakfast Recipes</a>
+                                                        <a href="<?php echo URL.'/'.$this->_Convert->vn2latin($row['title'], true).'-post-'.base64_encode($row['id']).'.html' ?>"><?php echo $row['title'] ?></a>
                                                     </h5>
-                                                    <p class="post-classic-text">Est velox nuptia, cesaris. Est dexter
-                                                        turpis, cesaris. Cum nixus persuadere, omnes fluctuies promissio
-                                                        flavum</p>
+                                                    <p class="post-classic-text">
+                                                        <?php echo $this->_Convert->cut($row['description'], 150) ?>
+                                                    </p>
                                                 </div>
                                             </article>
                                         </div>
-                                        <div class="col-sm-6">
-                                            <!-- Post Classic-->
-                                            <article class="post post-classic box-md">
-                                                <a class="post-classic-figure" href="blog-post.html">
-                                                    <img src="<?php echo URL.'/styles/' ?>images/post-2-370x239.jpg" alt="" width="370" height="239" />
-                                                </a>
-                                                <div class="post-classic-content">
-                                                    <div class="post-classic-time">
-                                                        <time datetime="2022-09-08">August 9, 2022</time>
-                                                    </div>
-                                                    <h5 class="post-classic-title">
-                                                        <a href="blog-post.html">Everyday Dinner Choices for a Healthier, Happier You</a>
-                                                    </h5>
-                                                    <p class="post-classic-text">Sensorems peregrinatione in rugensis
-                                                        civitas! Ubi est bi-color byssus? Velox, teres ollas recte
-                                                        aperto de castus</p>
-                                                </div>
-                                            </article>
-                                        </div>
+                                        <?php
+                                        }
+                                        ?>
                                     </div>
                                 </div>
                             </div>

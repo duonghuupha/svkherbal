@@ -28,6 +28,9 @@ class Blog extends Controller{
         $json = $this->model->get_detail_blog($id);
         $this->view->json = $json;
 
+        $json_extra = $this->model->get_data_block_extra($id, $json[0]['cate_id']);
+        $this->view->json_extra = $json_extra;
+
         $this->view->render('blog/detail');
         require('layouts/global/footer.php');
     }
