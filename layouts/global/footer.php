@@ -11,13 +11,13 @@
                             </div>
                             <ul class="list-schedule">
                                 <li>
-                                    <span>Thời gian làm việc:</span>
+                                    <span><?php echo $this->_Language->array_lang('time_work') ?>:</span>
                                     <span><?php echo $item[0]['time_work'] ?></span>
                                 </li>
                             </ul>
                             <div class="footer-classic-social">
                                 <div class="group-lg group-middle">
-                                    <p>Tìm chúng tôi</p>
+                                    <p><?php echo $this->_Language->array_lang('title_social') ?></p>
                                     <div>
                                         <ul class="list-inline list-social list-inline-sm">
                                             <li><a class="icon mdi mdi-facebook" href="<?php echo $item[0]['facebook'] ?>"></a></li>
@@ -30,7 +30,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4 col-xl-3 wow fadeInRight" data-wow-delay=".1s">
-                            <h4 class="footer-classic-title">Liên hệ</h4>
+                            <h4 class="footer-classic-title"><?php echo $this->_Language->array_lang('title_contact') ?></h4>
                             <ul class="contacts-creative">
                                 <li>
                                     <div class="unit unit-spacing-sm flex-column flex-md-row">
@@ -61,9 +61,9 @@
                             </ul>
                         </div>
                         <div class="col-lg-4 wow fadeInRight" data-wow-delay=".2s">
-                            <h4 class="footer-classic-title">Đăng ký bản tin</h4>
+                            <h4 class="footer-classic-title"><?php echo $this->_Language->array_lang('title_subscribe') ?></h4>
                             <p>
-                                Đăng ký nhận bản tin của chúng tôi để nhận tin tức hàng tuần, cập nhật, ưu đãi đặc biệt
+                                <?php echo $this->_Language->array_lang('content_subscribe') ?>
                             </p>
                             <!-- RD Mailform-->
                             <form class="rd-form rd-mailform rd-form-inline rd-form-inline-2"

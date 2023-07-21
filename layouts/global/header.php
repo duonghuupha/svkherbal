@@ -110,7 +110,7 @@ $item = $this->_Data->get_setting_global();
                                                 type="text" 
                                                 name="s"
                                                 autocomplete="off" />
-                                            <label class="form-label" for="rd-navbar-search-form-input">Từ khóa...</label>
+                                            <label class="form-label" for="rd-navbar-search-form-input"><?php echo $this->_Language->array_lang('keywork') ?>...</label>
                                             <div class="rd-search-results-live" id="rd-search-results-live"></div>
                                             <button class="rd-search-form-submit fl-bigmug-line-search74" type="button"></button>
                                         </div>
@@ -142,7 +142,7 @@ $item = $this->_Data->get_setting_global();
                                             <span></span>
                                         </span>
                                     </button>
-                                    <h5 class="rd-navbar-project-title">Thông tin liên hệ</h5>
+                                    <h5 class="rd-navbar-project-title"><?php echo $this->_Language->array_lang('title_contact') ?></h5>
                                 </div>
                                 <div class="rd-navbar-project-content">
                                     <div>

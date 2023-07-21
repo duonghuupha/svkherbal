@@ -7,7 +7,7 @@ $item = $this->_Data->get_setting_global();
                 <div class="container">
                     <div class="row row-40 row-md-50 justify-content-xl-between">
                         <div class="col-sm-6 col-lg-4 wow fadeInRight">
-                            <h5 class="footer-corporate-title">Thông tin liên hệ</h5>
+                            <h5 class="footer-corporate-title"><?php echo $this->_Language->array_lang('title_contact') ?></h5>
                             <div class="footer-corporate-decor"></div>
                             <ul class="footer-corporate-info">
                                 <li>
@@ -30,7 +30,7 @@ $item = $this->_Data->get_setting_global();
                                         </div>
                                         <div class="unit-body">
                                             <ul class="list-schedule">
-                                                <li><span>Điện thoại:</span><span><?php echo $item[0]['phone'] ?></span></li>
+                                                <li><span><?php echo $this->_Language->array_lang('title_input_phone') ?>:</span><span><?php echo $item[0]['phone'] ?></span></li>
                                                 <li><span>Hotline:</span><span><?php echo $item[0]['hotline'] ?></span></li>
                                             </ul>
                                         </div>
@@ -51,7 +51,7 @@ $item = $this->_Data->get_setting_global();
                             </ul>
                         </div>
                         <div class="col-sm-6 col-lg-4 wow fadeInRight" data-wow-delay=".1s">
-                            <h5 class="footer-corporate-title">Truy cập nhanh</h5>
+                            <h5 class="footer-corporate-title"><?php echo $this->_Language->array_lang('quick_link') ?></h5>
                             <div class="footer-corporate-decor"></div>
                             <ul class="footer-corporate-list d-sm-inline-block d-md-block">
                                 <?php
@@ -68,15 +68,19 @@ $item = $this->_Data->get_setting_global();
                             </ul>
                         </div>
                         <div class="col-lg-4 wow fadeInRight" data-wow-delay=".2s">
-                            <h5 class="footer-corporate-title">Liên hệ với chúng tôi</h5>
+                            <h5 class="footer-corporate-title"><?php echo $this->_Language->array_lang('title_contact_1') ?></h5>
                             <div class="footer-corporate-decor"></div>
                             <p class="footer-corporate-text">
                                 Chúng tôi luôn sẵn sàng giải đáp mọi thắc mắc của bạn hoặc giúp bạn lựa chọn
                                 những sản phẩm phù hợp với bạn có xuất sứ 100% từ thiên nhiên.
                             </p>
                             <div class="group-sm group-middle">
-                                <a class="button button-shadow-2 button-gray-14 button-zakaria" href="https://lanui.vn" target="_blank">Sản phẩm</a>
-                                <a class="button button-shadow-2 button-primary-2 button-zakaria" href="<?php echo URL.'/contact.html' ?>">Liên hệ</a>
+                                <a class="button button-shadow-2 button-gray-14 button-zakaria" href="https://lanui.vn" target="_blank">
+                                    <?php echo $this->_Language->array_lang('btn_product') ?>
+                                </a>
+                                <a class="button button-shadow-2 button-primary-2 button-zakaria" href="<?php echo URL.'/contact.html' ?>">
+                                <?php echo $this->_Language->array_lang('btn_contact') ?>
+                                </a>
                             </div>
                         </div>
                     </div>

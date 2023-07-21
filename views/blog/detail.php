@@ -14,7 +14,7 @@ $item = $this->json;
         <section class="section section-xl bg-default text-md-start">
             <div class="container">
                 <div class="row row-50 row-md-60">
-                    <div class="col-lg-8 col-xl-9">
+                    <div class="col-lg-12 col-xl-12">
                         <div class="inset-xl-right-100">
                             <div class="row row-50 row-md-60 row-lg-80">
                                 <div class="col-12">
@@ -69,7 +69,7 @@ $item = $this->json;
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <h6 class="single-post-title">Bài viết liên quan</h6>
+                                    <h6 class="single-post-title"><?php echo $this->_Language->array_lang('title_extra') ?></h6>
                                     <div class="row row-30">
                                         <div class="col-sm-6">
                                             <!-- Post Classic-->
@@ -110,52 +110,6 @@ $item = $this->json;
                                             </article>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-xl-3">
-                        <div class="aside row row-30 row-md-50 justify-content-md-between">
-                            <div class="aside-item col-sm-6 col-lg-12">
-                                <h6 class="aside-title">Bài viết mới</h6>
-                                <div class="row row-20 row-lg-30 gutters-10">
-                                    <?php
-                                    for($i=  1; $i <= 4; $i++){
-                                    ?>
-                                    <div class="col-6 col-lg-12">
-                                        <!-- Post Minimal-->
-                                        <article class="post post-minimal">
-                                            <div class="unit unit-spacing-sm flex-column flex-lg-row align-items-lg-center">
-                                                <div class="unit-left">
-                                                    <a class="post-minimal-figure" href="blog-post.html">
-                                                        <img src="<?php echo URL.'/styles/' ?>images/post-mini-1-106x104.jpg" alt="" width="106" height="104" />
-                                                    </a>
-                                                </div>
-                                                <div class="unit-body">
-                                                    <p class="post-minimal-title">
-                                                        <a href="blog-post.html">Why Organic Food is Full of Benefits</a>
-                                                    </p>
-                                                    <div class="post-minimal-time">
-                                                        <time datetime="2022-03-15">March 15, 2022</time>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </article>
-                                    </div>
-                                    <?php
-                                    }
-                                    ?>
-                                </div>
-                            </div>
-                            <div class="aside-item col-sm-6 col-md-5 col-lg-12">
-                                <h6 class="aside-title">Popular tags</h6>
-                                <div class="group-sm group-tags">
-                                    <a class="link-tag" href="#">Fruits</a>
-                                    <a  class="link-tag" href="#">Vegetables</a>
-                                    <a class="link-tag" href="#">Drinks</a>
-                                    <a class="link-tag" href="#">Organic</a>
-                                    <a class="link-tag" href="#">Food</a>
-                                    <a class="link-tag" href="#">Smoothies</a>
                                 </div>
                             </div>
                         </div>
