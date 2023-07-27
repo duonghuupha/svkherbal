@@ -56,6 +56,23 @@ $item = $this->_Data->get_setting_global();
                     <div class="rd-navbar-aside-outer">
                         <div class="rd-navbar-aside">
                             <p><?php echo $this->_Language->array_lang('time_work') ?>: <?php echo $item[0]['time_work'] ?></p>
+                            <div>
+                                <?php
+                                if(isset($_SESSION['lang'])){
+                                ?>
+                                <p class="rd-navbar-basket-text" 
+                                    onclick="window.location.href='<?php echo URL.'/change-lang-'.base64_encode('vi').'.html' ?>'"
+                                    style="cursor:pointer">Vietnamese</p>
+                                <?php
+                                }else{
+                                ?>
+                                <p class="rd-navbar-basket-text" 
+                                    onclick="window.location.href='<?php echo URL.'/change-lang-'.base64_encode('en').'.html' ?>'"
+                                    style="cursor:pointer">English</p>
+                                <?php
+                                }
+                                ?>
+                            </div>
                         </div>
                     </div>
                     <div class="rd-navbar-main-outer">
@@ -76,6 +93,23 @@ $item = $this->_Data->get_setting_global();
                                 </div>
                                 <div class="rd-navbar-collapse">
                                     <ul class="contacts-amber">
+                                        <li>
+                                            <?php
+                                            if(isset($_SESSION['lang'])){
+                                            ?>
+                                            <a href="<?php echo URL.'/change-lang-'.base64_encode('vi').'.html' ?>">
+                                                <b>Language: Vietnamese</b>
+                                            </a>
+                                            <?php
+                                            }else{
+                                            ?>
+                                            <a href="<?php echo URL.'/change-lang-'.base64_encode('en').'.html' ?>">
+                                                <b>Ngôn ngữ: English</b>
+                                            </a>
+                                            <?php
+                                            }
+                                            ?>
+                                        </li>
                                         <li>
                                             <a href="#">
                                                 <?php echo $item[0]['address'] ?>

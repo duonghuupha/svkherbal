@@ -12671,7 +12671,7 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-fixed .rd-navbar-search-toggle span::before {
-    content: "î‚œ";
+    content: "";
     transform: rotate(0deg) scale(1);
     opacity: 1;
     visibility: visible;
@@ -12679,7 +12679,7 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-fixed .rd-navbar-search-toggle span::after {
-    content: "î€ž";
+    content: "";
     transform: rotate(-90deg) scale(0.4);
     opacity: 0;
     visibility: hidden;

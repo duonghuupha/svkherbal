@@ -110,7 +110,7 @@ $item = $this->_Data->get_setting_global();
                                                 type="text" 
                                                 name="s"
                                                 autocomplete="off" />
-                                            <label class="form-label" for="rd-navbar-search-form-input"><?php echo $this->_Language->array_lang('keywork') ?>...</label>
+                                            <label class="form-label" for="rd-navbar-search-form-input"><?php echo $this->_Language->array_lang('keyword') ?>...</label>
                                             <div class="rd-search-results-live" id="rd-search-results-live"></div>
                                             <button class="rd-search-form-submit fl-bigmug-line-search74" type="button"></button>
                                         </div>
@@ -163,10 +163,23 @@ $item = $this->_Data->get_setting_global();
                                         </div>
                                         <div>
                                             <ul class="list-inline list-social list-inline-xl">
-                                                <li><a class="icon mdi mdi-facebook" href="<?php echo $item[0]['facebook'] ?>"></a></li>
-                                                <li><a class="icon mdi mdi-twitter" href="<?php echo $item[0]['twiter'] ?>"></a></li>
-                                                <li><a class="icon mdi mdi-instagram" href="<?php echo $item[0]['instagram'] ?>"></a></li>
-                                                <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
+                                                <li>
+                                                <?php
+                                                if(isset($_SESSION['lang'])){
+                                                ?>
+                                                <a href="<?php echo URL.'/change-lang-'.base64_encode('vi').'.html' ?>">
+                                                    <b>Language: Vietnamese</b>
+                                                </a>
+                                                <?php
+                                                }else{
+                                                ?>
+                                                <a href="<?php echo URL.'/change-lang-'.base64_encode('en').'.html' ?>">
+                                                    <b>Ngôn ngữ: English</b>
+                                                </a>
+                                                <?php
+                                                }
+                                                ?>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
