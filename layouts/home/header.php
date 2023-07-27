@@ -94,23 +94,6 @@ $item = $this->_Data->get_setting_global();
                                 <div class="rd-navbar-collapse">
                                     <ul class="contacts-amber">
                                         <li>
-                                            <?php
-                                            if(isset($_SESSION['lang'])){
-                                            ?>
-                                            <a href="<?php echo URL.'/change-lang-'.base64_encode('vi').'.html' ?>">
-                                                <b>Language: Vietnamese</b>
-                                            </a>
-                                            <?php
-                                            }else{
-                                            ?>
-                                            <a href="<?php echo URL.'/change-lang-'.base64_encode('en').'.html' ?>">
-                                                <b>Ngôn ngữ: English</b>
-                                            </a>
-                                            <?php
-                                            }
-                                            ?>
-                                        </li>
-                                        <li>
                                             <a href="#">
                                                 <?php echo $item[0]['address'] ?>
                                                 <br />
